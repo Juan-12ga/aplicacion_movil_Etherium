@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Etherium_app</string>
+    <string name="ic_persona">Icono de persona</string>
+    <string name="bienvenida_titulo">¡ Te damos la bienvenida</string>
+    <string name="nuevo"> de nuevo !</string>
+    <string name="scaner">icono de escaner</string>
+    <string name="ic_retroceder_btn">boton de ir atras</string>
+    <string name="tlo_escanear">Escanear</string>
+</resources>

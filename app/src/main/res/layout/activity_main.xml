@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/fondo">
+
+    <ImageView
+        android:id="@+id/icono_persona"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_apren"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/icono"
+        android:contentDescription="@string/ic_persona"/>
+
+    <TextView
+        android:id="@+id/Tlo_mipersona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="38dp"
+        app:layout_constraintStart_toEndOf="@id/icono_persona"
+        android:layout_marginStart="20dp"
+        android:textSize="28sp"
+        android:textColor="@color/texto"/>
+
+
+    <View
+        android:id="@+id/barra"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:background="@color/texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tarjeta_qr"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="18dp"
+        app:cardBackgroundColor="@color/tarjeta"
+        app:strokeColor="@color/tarjeta">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/bienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bienvenida_titulo"
+                android:textColor="@color/texto"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nuevo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nuevo"
+                android:textColor="@color/texto"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_leer_qr"
+                android:layout_width="280dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="50dp"
+                android:text="Leer QR"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical|start"
+                android:paddingStart="30dp"
+                app:backgroundTint="#1A85FF"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_scanner"
+                app:iconSize="60dp"
+                app:iconGravity="end"
+                app:iconPadding="10dp"
+                app:iconTint="@android:color/white"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_permisos"
+                android:layout_width="280dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="50dp"
+                android:text="Permisos"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical|start"
+                android:paddingStart="30dp"
+                app:backgroundTint="#1A85FF"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_permisos_vector"
+                app:iconSize="60dp"
+                app:iconGravity="end"
+                app:iconPadding="10dp"
+                app:iconTint="@android:color/white"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
