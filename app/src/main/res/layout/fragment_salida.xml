@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="325dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#212942"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+    <ImageView
+        android:id="@+id/iconoVerificado"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/icono_verificado"
+        />
+
+    <TextView
+        android:id="@+id/textoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Salida_registrada"
+        app:layout_constraintTop_toBottomOf="@id/iconoVerificado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:textColor="#F5F5F5"
+        android:textSize="29sp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textoDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textoPrincipal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:text="Registro realizado en el Sitio"
+        android:textAlignment="center"
+        android:textColor="#CCF5F5F5"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/Sitio_fragment_salida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textoPrincipal"
+        app:layout_constraintStart_toEndOf="@id/textoDescripcion"
+        android:layout_marginStart="5dp"
+        android:text=""
+        android:textColor="#CCF5F5F5"
+        android:textAlignment="center"
+        android:textSize="13sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

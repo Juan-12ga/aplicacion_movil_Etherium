@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="325dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#212942"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <ImageView
+        android:id="@+id/iconoFallido"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/icono_fallido"
+        />
+
+    <TextView
+        android:id="@+id/textoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Escaneo_fallido"
+        app:layout_constraintTop_toBottomOf="@id/iconoFallido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:textColor="#F5F5F5"
+        android:textSize="29sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textoDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textoPrincipal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/intenalo"
+        android:textAlignment="center"
+        android:textColor="#CCF5F5F5"
+        android:textSize="13sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

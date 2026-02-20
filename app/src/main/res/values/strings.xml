@@ -6,4 +6,11 @@
     <string name="scaner">icono de escaner</string>
     <string name="ic_retroceder_btn">boton de ir atras</string>
     <string name="tlo_escanear">Escanear</string>
+    <string name="Entrada_registrada">Entrada Registrada</string>
+    <string name="registro_realizado_en_el_sitio">Registro realizado en el sitio</string>
+    <string name="Salida_registrada">Salida Registrada</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Escaneo_fallido">Escaneo Fallido</string>
+    <string name="intenalo">Intentalo De Nuevo</string>
 </resources>
