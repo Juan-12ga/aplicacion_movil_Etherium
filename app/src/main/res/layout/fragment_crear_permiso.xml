@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".crearPermisoFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFormulario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardBackgroundColor="@color/color_tarjeta_permiso"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:id="@+id/Tlo_Crear_permiso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/crear_permiso"
+                    android:textColor="@color/texto"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnCerrar"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_cerrar_vector"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/texto"
+                    android:contentDescription="Cerrar freagment"/>
+
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Tipo de permiso"
+                android:textColorHint="#CCFFFFFF"
+                app:hintTextColor="@android:color/white"
+                app:boxBackgroundColor="@color/color_input"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/TipoPermiso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:paddingTop="22dp"
+                    android:paddingBottom="12dp"
+                    app:tint="@color/texto" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_input_redondo"
+                android:gravity="top"
+                android:hint="Descripción:"
+                android:padding="16dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/texto"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:id="@+id/contenedor_Adjuntar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_redondo"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:id="@+id/tv_adjuntar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/adjuntar"
+                    android:textColor="@color/texto" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_clip_vector"
+                    app:tint="@color/texto"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_input_redondo"
+                android:src="@drawable/ic_guardar_vector"
+                android:contentDescription="Guardar permiso"
+                android:text="@string/Guardar"
+                android:padding="10dp"
+                app:tint="@android:color/white" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,11 @@
     <string name="Entrada_registrada">Entrada Registrada</string>
     <string name="registro_realizado_en_el_sitio">Registro realizado en el sitio</string>
     <string name="Salida_registrada">Salida Registrada</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Escaneo_fallido">Escaneo Fallido</string>
     <string name="intenalo">Intentalo De Nuevo</string>
+    <string name="tlo_permisos">Permisos</string>
+    <string name="crear_permiso">Crear Permiso</string>
+    <string name="Guardar">Guardar</string>
+    <string name="adjuntar">Adjunta tu archivo: png, jpg o pdf</string>
 </resources>

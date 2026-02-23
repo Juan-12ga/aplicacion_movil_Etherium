@@ -10,4 +10,12 @@
     <color name="entrada">#09330D</color>
     <color name="salida">#430D1C</color>
     <color name="lector_qr">#D3D3D3</color>
+    <color name="color_pendiente">#A87C56</color>
+    <color name="color_aprobado">#90FCAB</color>
+    <color name="color_denegado">#E7999B</color>
+    <color name="color_letra_pendiente">#562C07</color>
+    <color name="color_letra_aprobado">#1F532C</color>
+    <color name="color_letra_denegado">#4A2021</color>
+    <color name="color_tarjeta_permiso">#212944</color>
+    <color name="color_input">#4A5FA0</color>
 </resources>

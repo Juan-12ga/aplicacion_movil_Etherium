@@ -37,7 +37,7 @@
         android:id="@+id/ic_retroceder_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="18dp"
         android:layout_marginStart="20dp"
         android:contentDescription="@string/ic_retroceder_btn"
         android:background="@drawable/ic_regresar_btn"
@@ -53,22 +53,13 @@
         android:textColor="@color/texto"
         android:textSize="28sp"
         android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/ic_retroceder_btn"
-        app:layout_constraintEnd_toStartOf="@+id/ic_escaner"
         app:layout_constraintStart_toEndOf="@+id/ic_retroceder_btn"
         app:layout_constraintTop_toTopOf="@+id/ic_retroceder_btn" />
 
-    <ImageView
-        android:id="@+id/ic_escaner"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="20dp"
-        android:contentDescription="ic_escanear"
-        android:src="@drawable/ic_scanner"
-        app:layout_constraintBottom_toBottomOf="@+id/ic_retroceder_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ic_retroceder_btn"
-        app:tint="@color/icono" />
+
 
     <View
         android:id="@+id/barra"

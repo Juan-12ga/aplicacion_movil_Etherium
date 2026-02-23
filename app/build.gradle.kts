@@ -32,6 +32,13 @@ android {
             )
         }
     }
+
+    // ESTO ES LO QUE SOLUCIONA EL AVISO DE LOS 16 KB
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11

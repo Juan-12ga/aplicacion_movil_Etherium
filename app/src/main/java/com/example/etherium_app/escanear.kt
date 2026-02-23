@@ -24,7 +24,6 @@ class escanear : AppCompatActivity() {
         binding = ActivityEscanearBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 1. Configurar el botón de retroceder
         binding.icRetrocederBtn.setOnClickListener { finish() }
 
         // 2. Inicializar el ejecutor de la cámara
