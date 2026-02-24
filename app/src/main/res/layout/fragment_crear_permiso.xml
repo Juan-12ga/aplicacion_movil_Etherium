@@ -64,8 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:hint="Tipo de permiso"
-                android:textColorHint="#CCFFFFFF"
-                app:hintTextColor="@android:color/white"
+                android:textColorHint="@color/texto"
                 app:boxBackgroundColor="@color/color_input"
                 app:boxCornerRadiusTopEnd="20dp"
                 app:boxCornerRadiusTopStart="20dp"
@@ -79,25 +78,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="true"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"
                     android:paddingTop="22dp"
-                    android:paddingBottom="12dp"
-                    app:tint="@color/texto" />
+                    android:paddingBottom="12dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/Descripcion"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/bg_input_redondo"
-                android:gravity="top"
-                android:hint="Descripción:"
-                android:padding="16dp"
-                android:textColor="@android:color/white"
-                android:textColorHint="@color/texto"
-                android:layout_marginBottom="16dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:counterTextColor="@color/texto"
+                app:endIconTint="@color/texto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bg_input_redondo"
+                    android:gravity="top"
+                    android:hint="Descripción:"
+                    android:padding="16dp"
+                    android:textColor="@color/texto"
+                    android:textColorHint="@color/texto"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100" /> </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:id="@+id/contenedor_Adjuntar"

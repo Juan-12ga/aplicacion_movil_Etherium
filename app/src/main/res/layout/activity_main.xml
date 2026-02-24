@@ -9,27 +9,28 @@
     android:background="@color/fondo">
 
     <ImageView
-        android:id="@+id/icono_persona"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/ic_apren"
+        android:id="@+id/icono_etherium"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/logo_etherium"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40dp"
+       android:layout_marginEnd="40dp"
         android:backgroundTint="@color/icono"
-        android:contentDescription="@string/ic_persona"/>
+        android:contentDescription="@string/ic_etherium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/Tlo_mipersona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="38dp"
-        app:layout_constraintStart_toEndOf="@id/icono_persona"
-        android:layout_marginStart="20dp"
+        android:text="@string/Etherium"
+        android:textColor="@color/texto"
         android:textSize="28sp"
-        android:textColor="@color/texto"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="38dp"/>
 
 
     <View

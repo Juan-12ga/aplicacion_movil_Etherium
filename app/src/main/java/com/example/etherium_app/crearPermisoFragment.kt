@@ -1,7 +1,8 @@
 package com.example.etherium_app
 
-import android.R
+
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -13,13 +14,12 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.etherium_app.databinding.FragmentCrearPermisoBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class crearPermisoFragment : Fragment() {
     private var _binding: FragmentCrearPermisoBinding? = null
     private val binding get() = _binding!!
-
     private var archivoseleccionadoU: Uri? = null
-
     private val lanzadorArchivo = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
@@ -28,13 +28,11 @@ class crearPermisoFragment : Fragment() {
             archivoseleccionadoU = data?.data
 
             if (archivoseleccionadoU != null) {
-                // Cambiamos el texto del botón para que el usuario sepa que funcionó
                 binding.tvAdjuntar.text = "Archivo seleccionado con éxito"
                 Toast.makeText(requireContext(), "Archivo listo", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,33 +40,45 @@ class crearPermisoFragment : Fragment() {
         _binding = FragmentCrearPermisoBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        // Ocultar FAB del Activity
+        activity?.findViewById<FloatingActionButton>(R.id.btn_agregar_permiso)?.hide()
         configurarMenuDesplegable()
         botones()
     }
     private fun configurarMenuDesplegable() {
-        val opciones = arrayOf("licencia por luto", "Cita médica", "Personal", "Calamidad Doméstica" )
+        val opciones = arrayOf("Licencia por luto", "Cita médica", "Personal", "Calamidad Doméstica")
+        binding.TipoPermiso.setOnClickListener {
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setTitle("Seleccione un tipo de permiso")
 
-        // Usamos un layout simple que ya viene en Android (simple_dropdown_item_1line)
-        val adapter = ArrayAdapter(requireContext(), R.layout.simple_dropdown_item_1line, opciones)
+            var indiceSeleccionado = 0
+            builder.setSingleChoiceItems(opciones, indiceSeleccionado) { _, which ->
+                indiceSeleccionado = which
+            }
+            builder.setPositiveButton("Aceptar") { dialog, _ ->
+                binding.TipoPermiso.setText(opciones[indiceSeleccionado])
+                dialog.dismiss()
+            }
+            builder.setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.dismiss()
+            }
+            builder.create().show()
+        }
 
-        // Asignamos el adaptador al AutoCompleteTextView
-        binding.TipoPermiso.setAdapter(adapter)
     }
+
     private fun botones() {
         binding.btnCerrar.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
-        // Botón Adjuntar: Lanza el selector con filtros específicos
+
         binding.tvAdjuntar.setOnClickListener {
             abrirSelectorDeArchivos()
         }
 
-        // Botón Guardar: Valida y procesa
         binding.btnGuardar.setOnClickListener {
             val tipo = binding.TipoPermiso.text.toString()
             val desc = binding.Descripcion.text.toString()
@@ -78,7 +88,6 @@ class crearPermisoFragment : Fragment() {
             } else if (archivoseleccionadoU == null) {
                 Toast.makeText(requireContext(), "Debes adjuntar un soporte (JPG, PNG o PDF)", Toast.LENGTH_SHORT).show()
             } else {
-                // Aquí llamaremos a tu API de PHP en el futuro
                 Toast.makeText(requireContext(), "Enviando: $tipo", Toast.LENGTH_LONG).show()
             }
         }
@@ -86,17 +95,17 @@ class crearPermisoFragment : Fragment() {
 
     private fun abrirSelectorDeArchivos() {
         val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
-            type = "*/*" // Tipo general requerido por el Intent
+            type = "*/*"
             val mimeTypes = arrayOf("image/jpeg", "image/png", "application/pdf")
-            putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes) // Filtro real
+            putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes)
             addCategory(Intent.CATEGORY_OPENABLE)
         }
         lanzadorArchivo.launch(intent)
     }
 
     override fun onDestroyView() {
+        activity?.findViewById<FloatingActionButton>(R.id.btn_agregar_permiso)?.show()
         super.onDestroyView()
-        _binding = null // Siempre limpiar el binding en fragmentos
+        _binding = null
     }
-
 }

@@ -1,19 +1,21 @@
 <resources>
     <string name="app_name">Etherium_app</string>
     <string name="ic_persona">Icono de persona</string>
-    <string name="bienvenida_titulo">¡ Te damos la bienvenida</string>
-    <string name="nuevo"> de nuevo !</string>
-    <string name="scaner">icono de escaner</string>
-    <string name="ic_retroceder_btn">boton de ir atras</string>
-    <string name="tlo_escanear">Escanear</string>
-    <string name="Entrada_registrada">Entrada Registrada</string>
+    <string name="bienvenida_titulo">¡Te damos la bienvenida</string>
+    <string name="nuevo"> de nuevo!</string>
+    <string name="scaner">Icono de escáner</string>
+    <string name="ic_retroceder_btn">Botón de ir atrás
+    </string> <string name="tlo_escanear">Escanear</string>
+    <string name="Entrada_registrada">Entrada registrada</string>
     <string name="registro_realizado_en_el_sitio">Registro realizado en el sitio</string>
-    <string name="Salida_registrada">Salida Registrada</string>
+    <string name="Salida_registrada">Salida registrada</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Escaneo_fallido">Escaneo Fallido</string>
-    <string name="intenalo">Intentalo De Nuevo</string>
+    <string name="Escaneo_fallido">Escaneo fallido</string>
+    <string name="intenalo">Inténtalo de nuevo</string>
     <string name="tlo_permisos">Permisos</string>
-    <string name="crear_permiso">Crear Permiso</string>
+    <string name="crear_permiso">Crear permiso</string>
     <string name="Guardar">Guardar</string>
-    <string name="adjuntar">Adjunta tu archivo: png, jpg o pdf</string>
+    <string name="adjuntar">Adjunta tu archivo: PNG, JPG o PDF</string>
+    <string name="ic_etherium">Icono de Etherium</string>
+    <string name="Etherium">Etherium</string>
 </resources>
